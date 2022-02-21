@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Title Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/My_style.css">
+    
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    
+    <!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+    <script src="js/custom.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">DSLeaRner</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首頁</a></li>
+                    <li><a href="#">功能介紹</a></li>
+                    <li><a href="#">課程章節</a></li>
+                    <li><a href="#">情境式攝影測驗</a></li>
+                    <li><a href="#">設定</a></li>
+                    <li><a href="#">關於DSLeaRner</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 text-left">
+                <span class="glyphicon glyphicon-exclamation-sign"><a href="#">詳細資料</a></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-8" onload="draw();">
+                <!-- <img class="text-center w-100" src="img/camera_model.jpg"> -->
+                <canvas id="canvas" width="150" height="150"></canvas>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <div class="row">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Firstname</th>
+                                <th>Lastname</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>光圈</td>
+                              <!--   <td>F2.8</td> -->
+
+                                <td id="slider">
+                                  <div id="custom-handle" class="ui-slider-handle"></div>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td>快門</td>
+                                <!-- <td>1/400</td> -->
+                                <td id="slider-1">
+                                  <div id="custom-handle-1" class="ui-slider-handle"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ISO</td>
+                                <!-- <td>400</td> -->
+                                <td id="slider-2">
+                                  <div id="custom-handle-2" class="ui-slider-handle"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <!-- <button class="shot-btn" id="shot-btn-id" value="take a shot"></button> -->
+                    <input type="button" value="拍照 " style="width:120px;height:40px;font-size:20px;" class="shot-btn" id="shot-btn-id">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery2                                                                                 .js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var handle = $( "#custom-handle" );
+    $( "#slider" ).slider({
+      create: function() {
+        handle.text( $( this ).slider( "value" ) );
+      },
+      slide: function( event, ui ) {
+        handle.text( ui.value );
+      }
+    });
+  } );
+  </script>
+
+
+
+
+</html>

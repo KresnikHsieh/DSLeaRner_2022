@@ -1,0 +1,32 @@
+.img-100{
+	width: 100%;
+}
+
+.h-space{
+	height: 100px;
+}
+
+.s-space{
+	height: 50px;
+}
+
+
+.img-space{
+	height: 15px;
+}
+
+.in-line{
+	display: inline-block;
+}
+
+p{
+	font-size: 15.5px;
+}
+
+h5{
+	font-size: 16.75px;
+}
+
+.f-red{
+ color: red;
+}
